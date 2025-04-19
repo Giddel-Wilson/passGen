@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+:root {
+  --primary-color: #2F3676;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F8F9FB;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Responsive utilities */
+@layer utilities {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 1rem);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .break-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Better touch targets on mobile */
+@media (max-width: 640px) {
+  button, 
+  [role="button"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  input, select, textarea {
+    font-size: 16px; /* Prevents iOS zoom on input focus */
+  }
+}

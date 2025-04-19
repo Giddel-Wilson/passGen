@@ -1,0 +1,12 @@
+/* Custom components that use Tailwind classes */
+@tailwind components;
+
+@layer components {
+	.theme-btn {
+		@apply rounded-md px-4 py-2 transition-colors;
+	}
+
+	.primary-btn {
+		@apply bg-primary text-on-primary hover:bg-primary-hover;
+	}
+}
